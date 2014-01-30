@@ -1,0 +1,103 @@
+@import "mixins";
+
+/* ============================================================================================================================
+  Brand Colors
+============================================================================================================================ */
+    @brand-color-1: #CCCCCC; /* light gray */
+    @brand-color-2: #EFEFEF; /* lighter light gray */    
+    @brand-color-3: #FFFFFF; /* white */
+
+/* ============================================================================================================================
+  Background Gradients
+  These use the mixin as a template to push out all the browser prefixes, etc.
+============================================================================================================================ */
+    /* white to light gray gradient */
+    .gradient-color-1(@startColor: @brand-color-3, @endColor: @brand-color-1, @colorStopStart: 0%, @colorStopEnd: 100%) {
+        .gradient-color(@startColor, @endColor, @colorStopStart, @colorStopEnd);	
+    }
+
+/* ============================================================================================================================
+  Rounded Corners
+============================================================================================================================ */
+    .round-corners-1 {
+        .border-radius(5px);
+        .background-clip-2;    
+    }
+    .round-corners-2(@radius: 5px) {
+        .border-bottom-radius(@radius);
+        .background-clip-2; 
+    }                             
+
+/* ============================================================================================================================
+  Box Sizing
+============================================================================================================================= */
+    .box-sizing-1 (@boxmodel: content-box) {
+        .box-sizing(@boxmodel)
+    }
+    .box-sizing-2 (@boxmodel: border-box) {
+        .box-sizing(@boxmodel)
+    }
+
+/* ============================================================================================================================
+  Background Clip
+============================================================================================================================ */
+    .background-clip-1(@background-clip: border-box) {
+        .background-clip(@background-clip)
+    }
+    .background-clip-2(@background-clip: padding-box) {
+        .background-clip(@background-clip)
+    }
+    .background-clip-3(@background-clip: content-box) {
+        .background-clip(@background-clip)
+    }
+
+/* ============================================================================================================================
+  Box Shadow
+============================================================================================================================ */
+    .box-shadow-1(@x:0px, @y:5px, @blur:6px, @color:@brand-color-1) {
+        .box-shadow(@x, @y, @blur, @color)
+    }
+   
+/* ============================================================================================================================
+  Borders
+============================================================================================================================ */
+    @border-width-1: 1px;
+    @border-style-1: solid;
+
+/* ============================================================================================================================
+  ClearFix Method:
+  Used to force DIVs to fully wrap inner floated elements via height
+  This method is best used via the Extend Feature: "&:extend(.clearFix all);" placed within a class or ID
+============================================================================================================================ */
+    .clearFix {
+	    *zoom: 1;
+	    &:before {
+		    content: " ";
+		    display: table;
+	    }
+	    &:after {
+		    clear:both;
+		    content: " ";
+		    display: table;
+            line-height: 0;
+	    }
+    }
+/* ============================================================================================================================
+  CSS Transitions
+============================================================================================================================ */
+    .transition-none(@transString:~"none") {
+        .transition(@transString)
+    }
+    .transition-1(@transString:~"all, .2s, ease") {
+        .transition(@transString)
+    }
+    .transition-2(@transString:~"all, .3s, ease") {
+        .transition(@transString)
+    }
+
+/* ============================================================================================================================
+  CSS Transitions
+============================================================================================================================ */
+    .animation-1(@name:FadeIn, @duration:2s, @ease:ease-in) {
+	   .animation(@name, @duration, @ease)
+    }

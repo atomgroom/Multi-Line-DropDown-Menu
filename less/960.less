@@ -1,0 +1,552 @@
+/* ============================================================================================================================
+
+Flexible Modular 960GS
+
+https://github.com/atomgroomdesign/Flexible-Modular-960-Grid-System
+
+============================================================================================================================= */ 
+
+.container_16,
+.container_16f {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+.container_16,
+.b_padding--lowAll,
+.b_padding--medAll,
+.b_padding--maxAll,
+.b_padding--minVert,
+.b_padding--lowVert,
+.b_padding--medVert,
+.b_padding--maxVert,
+.b_padding--minHorz,
+.b_padding--lowHorz,
+.b_padding--medHorz,
+.b_padding--maxHorz {
+	&:extend(.clearFix all);
+}
+
+/* Grid Helpers */
+.b_padding--lowAll {
+    padding: 10px;
+}
+.b_padding--medAll {
+    padding: 20px;
+}
+.b_padding--maxAll {
+    padding: 30px;
+}
+
+.b_padding--minVert{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.b_padding--lowVert{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.b_padding--medVert {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.b_padding--maxVert {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.b_padding--minHorz {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.b_padding--lowHorz {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.b_padding--medHorz {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.b_padding--maxHorz {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.pullRight {
+    float: right;
+}
+.pullLeft {
+    float: left;
+}
+
+
+/* Container
+----------------------------------------------------------------------------------------------------*/
+
+.container_16 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16 {
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px
+}
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12,
+.push_13, .pull_13,
+.push_14, .pull_14,
+.push_15, .pull_15,
+.push_16, .pull_16 {
+  position: relative;
+}
+
+.grid_1 {
+	width: 40px
+}
+.grid_2 {
+	width: 100px
+}
+.grid_3 {
+	width: 160px
+}
+.grid_4 {
+	width: 220px
+}
+.grid_5 {
+	width: 280px
+}
+.grid_6 {
+	width: 340px
+}
+.grid_7 {
+	width: 400px
+}
+.grid_8 {
+	width: 460px
+}
+.grid_9 {
+	width: 520px
+}
+.grid_10 {
+	width: 580px
+}
+.grid_11 {
+	width: 640px
+}
+.grid_12 {
+	width: 700px
+}
+.grid_13 {
+	width: 760px
+}
+.grid_14 {
+	width: 820px
+}
+.grid_15 {
+	width: 880px
+}
+.grid_16 {
+	width: 940px
+}
+
+/* Prefix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+.prefix_1 {
+	padding-left: 60px
+}
+.prefix_2 {
+	padding-left: 120px
+}
+.prefix_3 {
+	padding-left: 180px
+}
+.prefix_4 {
+	padding-left: 240px
+}
+.prefix_5 {
+	padding-left: 300px
+}
+.prefix_6 {
+	padding-left: 360px
+}
+.prefix_7 {
+	padding-left: 420px
+}
+.prefix_8 {
+	padding-left: 480px
+}
+.prefix_9 {
+	padding-left: 540px
+}
+.prefix_10 {
+	padding-left: 600px
+}
+.prefix_11 {
+	padding-left: 660px
+}
+.prefix_12 {
+	padding-left: 720px
+}
+.prefix_13 {
+	padding-left: 780px
+}
+.prefix_14 {
+	padding-left: 840px
+}
+.prefix_15 {
+	padding-left: 900px
+}
+
+/* Suffix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+.suffix_1 {
+	padding-right: 60px
+}
+.suffix_2 {
+	padding-right: 120px
+}
+.suffix_3 {
+	padding-right: 180px
+}
+.suffix_4 {
+	padding-right: 240px
+}
+.suffix_5 {
+	padding-right: 300px
+}
+.suffix_6 {
+	padding-right: 360px
+}
+.suffix_7 {
+	padding-right: 420px
+}
+.suffix_8 {
+	padding-right: 480px
+}
+.suffix_9 {
+	padding-right: 540px
+}
+.suffix_10 {
+	padding-right: 600px
+}
+.suffix_11 {
+	padding-right: 660px
+}
+.suffix_12 {
+	padding-right: 720px
+}
+.suffix_13 {
+	padding-right: 780px
+}
+.suffix_14 {
+	padding-right: 840px
+}
+.suffix_15 {
+	padding-right: 900px
+}
+
+/* Push Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.push_1 {
+  left: 60px;
+}
+
+.push_2 {
+  left: 120px;
+}
+
+.push_3 {
+  left: 180px;
+}
+
+.push_4 {
+  left: 240px;
+}
+
+.push_5 {
+  left: 300px;
+}
+
+.push_6 {
+  left: 360px;
+}
+
+.push_7 {
+  left: 420px;
+}
+
+.push_8 {
+  left: 480px;
+}
+
+.push_9 {
+  left: 540px;
+}
+
+.push_10 {
+  left: 600px;
+}
+
+.push_11 {
+  left: 660px;
+}
+
+.push_12 {
+  left: 720px;
+}
+
+.push_13 {
+  left: 780px;
+}
+
+.push_14 {
+  left: 840px;
+}
+
+.push_15 {
+  left: 900px;
+}
+
+/* Pull Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.pull_1 {
+  left: -60px;
+}
+
+.pull_2 {
+  left: -120px;
+}
+
+.pull_3 {
+  left: -180px;
+}
+
+.pull_4 {
+  left: -240px;
+}
+
+.pull_5 {
+  left: -300px;
+}
+
+.pull_6 {
+  left: -360px;
+}
+
+.pull_7 {
+  left: -420px;
+}
+
+.pull_8 {
+  left: -480px;
+}
+
+.pull_9 {
+  left: -540px;
+}
+
+.pull_10 {
+  left: -600px;
+}
+
+.pull_11 {
+  left: -660px;
+}
+
+.pull_12 {
+  left: -720px;
+}
+
+.pull_13 {
+  left: -780px;
+}
+
+.pull_14 {
+  left: -840px;
+}
+
+.pull_15 {
+  left: -900px;
+}
+
+/* Flexible Grid System >> converts to % values, uses "f" on the end of the standard class names
+----------------------------------------------------------------------------------------------------*/
+.grid_1f,
+.grid_2f,
+.grid_3f,
+.grid_4f,
+.grid_5f,
+.grid_6f,
+.grid_7f,
+.grid_8f,
+.grid_9f,
+.grid_10f,
+.grid_11f,
+.grid_12f,
+.grid_13f,
+.grid_14f,
+.grid_15f,
+.grid_16f, 
+.container_16f {
+	display: inline;
+	float: left;
+	margin-left: 1.041666666%;
+	margin-right: 1.041666666%;
+}
+.grid_1f,
+.prefix_1f,
+.suffix_1f,
+.push_1f,
+.pull_1f  {
+	width: 4.166666666%
+}
+.grid_2f,
+.prefix_2f,
+.suffix_2f,
+.push_2f,
+.pull_2f  {
+	width: 10.416666666%
+}
+.grid_3f,
+.prefix_3f,
+.suffix_3f,
+.push_3f,
+.pull_3f  {
+	width: 16.666666666%
+}
+.grid_4f,
+.prefix_4f,
+.suffix_4f,
+.push_4f,
+.pull_4f  {
+	width: 22.916666666%
+}
+.grid_5f,
+.prefix_5f,
+.suffix_5f,
+.push_5f,
+.pull_5f  {
+	width: 29.166666666%
+}
+.grid_6f,
+.prefix_6f,
+.suffix_6f,
+.push_6f,
+.pull_6f  {
+	width: 35.416666666%
+}
+.grid_7f,
+.prefix_7f,
+.suffix_7f,
+.push_7f,
+.pull_7f  {
+	width: 41.666666666%
+}
+.grid_8f,
+.prefix_8f,
+.suffix_8f,
+.push_8f,
+.pull_8f  {
+	width: 47.916666666%
+}
+.grid_9f,
+.prefix_9f,
+.suffix_9f,
+.push_9f,
+.pull_9f  {
+	width: 54.166666666%
+}
+.grid_10f,
+.prefix_10f,
+.suffix_10f,
+.push_10f,
+.pull_10f  {
+	width: 60.416666666%
+}
+.grid_11f,
+.prefix_11f,
+.suffix_11f,
+.push_11f,
+.pull_11f  {
+	width: 66.666666666%
+}
+.grid_12f,
+.prefix_12f,
+.suffix_12f,
+.push_12f,
+.pull_12f  {
+	width: 72.916666666%
+}
+.grid_13f,
+.prefix_13f,
+.suffix_13f,
+.push_13f,
+.pull_13f  {
+	width: 79.166666666%
+}
+.grid_14f,
+.prefix_14f,
+.suffix_14f,
+.push_14f,
+.pull_14f  {
+	width: 85.416666666%
+}
+.grid_15f,
+.prefix_15f,
+.suffix_15f,
+.push_15f,
+.pull_15f  {
+	width: 91.666666666%
+}
+.grid_16f {
+	width: 97.916666666%
+}
+.container_16f{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+.alpha {
+	margin-left: 0
+}
+.omega {
+	margin-right: 0
+}

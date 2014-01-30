@@ -1,0 +1,103 @@
+@import "mixins.less";
+@import "variables.less";
+@import "960.less";
+@import "normalize.less";
+
+/* Big Drop Down Menu - Supports a dropdown with options that contain multiple lines of text */
+.dropDownMenuMultiLines {
+	.round-corners-1;
+    position: relative;
+    cursor: pointer;
+    &:extend(.clearFix all);
+    color: @brand-color-1;
+}
+.dropDownMenuMultiLines:before {
+    content:"";
+    position: absolute;
+    right: 35px;
+    top: 0;
+    display: block; 
+}
+.dropDownMenuMultiLines:after {
+    content:"";
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    width: 0; 
+	height: 0;
+    display: block; 
+}
+.dropDownMenuMultiLines {
+    &:before {
+        border-left: @border-width-1 @border-style-1 @brand-color-1;
+        width: 1px;
+        height: 100%;
+    }
+    &:after {
+	    border-left: 8px outset transparent;
+	    border-right: 8px outset transparent;
+	    border-top: 8px solid @brand-color-1;
+        bottom:9px;
+    }
+}
+.dropDownMenuMultiLines-selected {
+    &:before {
+        display: none;
+    }
+}
+.ie7 .dropDownMenuMultiLines{ /* ie7 support */
+    background: @brand-color-3 url(../img/icon-dropdown.png) 99% 50% no-repeat;  
+}
+.dropDownMenuMultiLines-options,
+.dropDownMenuMultiLines-selected {
+    &:extend(.clearFix all);
+}
+.dropDownMenuMultiLines .dropDownMenuMultiLines-options-selected {
+    border-top: 0;
+}
+.dropDownMenuMultiLines-options {
+    position: absolute;
+    left: -1px;
+    .round-corners-2;
+    width: 100%;
+    background-color: @brand-color-3;
+    .background-clip-1;
+    z-index:3;
+    box-shadow: 0 4px 6px @brand-color-1;
+    li {
+        padding:5px 10px;
+        &:extend(.clearFix all);
+
+        &:hover {
+            background: @brand-color-2;
+        }
+        &:last-child {
+            .round-corners-2;
+        }
+    }
+}
+.dropDownMenuMultiLines-selected--lastItem {
+    padding-right: 20px;
+}
+.dropDownMenu-selectedItems {
+    padding:5px 0px;
+}
+/* OOCSS Borders */
+.borderPrimary {
+    border: @border-style-1 @border-width-1 @brand-color-1;
+}
+.borderPrimary--top {
+    border-top: @border-style-1 @border-width-1 @brand-color-1;
+}
+.borderPrimary--right {
+    border-right: @border-style-1 @border-width-1 @brand-color-1;
+}
+.borderPrimary--bottom {
+    border-bottom: @border-style-1 @border-width-1 @brand-color-1;
+}
+.borderPrimary--left {
+    border-left: @border-style-1 @border-width-1 @brand-color-1;
+}
+/* Demo Specific */
+ul {list-style:none; margin:0; padding:0}
+.displayNone {display:none;}
